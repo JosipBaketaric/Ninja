@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Ninja</title>
+
+    <link href="scripts/AngularMaterial/angular-material.min.css" rel="stylesheet"/>
+    <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Include all scripts -->
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/jquery-3.2.1.js"></script>
+    <script src="scripts/angular-ui-router.min.js"></script>
+    <script src="scripts/AngularMaterial/angular-animate.min.js"></script>
+    <script src="scripts/AngularMaterial/angular-aria.min.js"></script>
+    <script src="scripts/AngularMaterial/angular-messages.min.js"></script>
+    <script src="scripts/AngularMaterial/angular-material.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="scripts/bootstrap/js/tether.min.js"></script>
+    <script src="scripts/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+    <!-- Controllers -->
+    <script src="Clan/ClanController.js"></script>
+    <script src="Ninja/NinjaController.js"></script>
+    <script src="Login/LoginController.js"></script>
+
+
+    <!-- Directives -->
+
+
+
+</head>
+    
+     
+
+
+<body ng-app="appModule">
+
+    <!-- Header -->
+
+    <nav class="navbar">
+      <div class="container-fluid row">
+        <div class="navbar-header">
+            <span class="col lead">Ninja APP</span>
+            <a href="#!/ninja" class="col">Ninja</a>
+            <a href="#!/clan" class="col">Clan</a>
+            <a href="#!/login" class="col pull-right">Login</a>
+        </div>         
+      </div>
+    </nav>
+
+    <!-- End of header -->
+
+
+
+
+ 
+    <!-- Container for routing -->
+    <div class="container" ui-view>
+
+    </div>
+
+
+
+</body>
+</html>

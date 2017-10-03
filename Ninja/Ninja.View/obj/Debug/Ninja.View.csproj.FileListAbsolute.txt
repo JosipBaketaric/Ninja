@@ -1,0 +1,5 @@
+C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.View\bin\Debug\Ninja.View.dll
+C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.View\bin\Debug\Ninja.View.pdb
+C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.View\obj\Debug\Ninja.View.csprojResolveAssemblyReference.cache
+C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.View\obj\Debug\Ninja.View.dll
+C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.View\obj\Debug\Ninja.View.pdb

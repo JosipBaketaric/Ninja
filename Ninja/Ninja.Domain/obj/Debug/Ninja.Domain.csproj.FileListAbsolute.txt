@@ -1,0 +1,5 @@
+c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\bin\Debug\Ninja.Domain.dll
+c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\bin\Debug\Ninja.Domain.pdb
+c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.csprojResolveAssemblyReference.cache
+c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.dll
+c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.pdb
