@@ -64,6 +64,14 @@
     <Compile Include="Migrations\201710030859367_AddTokenAndPassword.Designer.cs">
       <DependentUpon>201710030859367_AddTokenAndPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710041053292_SeedForUser.cs" />
+    <Compile Include="Migrations\201710041053292_SeedForUser.Designer.cs">
+      <DependentUpon>201710041053292_SeedForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710041219385_RemoveTokenExpirationTime.cs" />
+    <Compile Include="Migrations\201710041219385_RemoveTokenExpirationTime.Designer.cs">
+      <DependentUpon>201710041219385_RemoveTokenExpirationTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NinjaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +98,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710030859367_AddTokenAndPassword.resx">
       <DependentUpon>201710030859367_AddTokenAndPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710041053292_SeedForUser.resx">
+      <DependentUpon>201710041053292_SeedForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710041219385_RemoveTokenExpirationTime.resx">
+      <DependentUpon>201710041219385_RemoveTokenExpirationTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

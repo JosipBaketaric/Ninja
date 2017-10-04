@@ -11,7 +11,6 @@ namespace Ninja.Domain
         //Auth
         public string Password { get; set; }
         public string Token { get; set; }
-        public DateTime TokenExpirationTime { get; set; }
 
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }

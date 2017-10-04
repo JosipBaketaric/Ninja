@@ -1,6 +1,6 @@
 namespace Ninja.Data.Migrations
 {
-
+    using System;
     using System.Data.Entity.Migrations;
 
     internal sealed class Configuration : DbMigrationsConfiguration<NinjaContext>
@@ -29,6 +29,10 @@ namespace Ninja.Data.Migrations
                 new Ninja.Domain.Clan { Name = "Clan HC" },
                 new Ninja.Domain.Clan { Name = "Clan HŽ" });
 
+            context.Ninjas.AddOrUpdate(p => p.Name,
+                new Ninja.Domain.Ninja { Name = "JosipSan", Password = "pass" },
+                new Ninja.Domain.Ninja { Name = "MiroSan", Password = "pass" });
+                
 
         }
     }

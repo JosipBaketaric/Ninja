@@ -3,8 +3,7 @@ namespace Ninja.Repository.Repositories
 {
     public interface INinjasRepository : IGenericRepository<Ninja.Domain.Ninja>
     {
-        int LoginNinja(string Name, string password, string token);
-        bool RefreshToken(int id);
-        bool IsUserLogedIn(int id);
+        int IsUserLogedIn(int id);
+        Ninja.Domain.Ninja LoginNinja(string Name, string password, string token);
     }
 }

@@ -15,3 +15,23 @@ c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Data\obj\Debu
 C:\Users\josipba\Documents\Visual Studio 2012\Projects\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.AddFKAndRemoveListNavigation.resources
 C:\Users\josipba\Documents\Visual Studio 2012\Projects\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.AddVirtualListsAndAttributesForNavigation.resources
 C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.AddTokenAndPassword.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\Ninja.Data.dll.config
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\Ninja.Data.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\Ninja.Data.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\EntityFramework.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\Ninja.Domain.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\Ninja.Domain.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\EntityFramework.xml
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.csprojResolveAssemblyReference.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.Initial.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.AddFKAndRemoveListNavigation.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.AddVirtualListsAndAttributesForNavigation.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.AddTokenAndPassword.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.csproj.GenerateResource.Cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.csproj.CoreCompileInputs.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.SeedForUser.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.RemoveTokenExpirationTime.resources

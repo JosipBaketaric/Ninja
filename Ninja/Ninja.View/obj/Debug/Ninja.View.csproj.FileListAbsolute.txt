@@ -8,3 +8,9 @@ C:\Users\josipba\Documents\Ninja\Ninja\Ninja.View\bin\Debug\Ninja.View.pdb
 C:\Users\josipba\Documents\Ninja\Ninja\Ninja.View\obj\Debug\Ninja.View.csprojResolveAssemblyReference.cache
 C:\Users\josipba\Documents\Ninja\Ninja\Ninja.View\obj\Debug\Ninja.View.dll
 C:\Users\josipba\Documents\Ninja\Ninja\Ninja.View\obj\Debug\Ninja.View.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.View\bin\Debug\Ninja.View.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.View\bin\Debug\Ninja.View.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.View\obj\Debug\Ninja.View.csprojResolveAssemblyReference.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.View\obj\Debug\Ninja.View.csproj.CoreCompileInputs.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.View\obj\Debug\Ninja.View.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.View\obj\Debug\Ninja.View.pdb

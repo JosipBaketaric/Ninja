@@ -3,3 +3,9 @@ c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\bin\De
 c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.csprojResolveAssemblyReference.cache
 c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.dll
 c:\users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Domain\bin\Debug\Ninja.Domain.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Domain\bin\Debug\Ninja.Domain.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.csprojResolveAssemblyReference.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.csproj.CoreCompileInputs.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Domain\obj\Debug\Ninja.Domain.pdb

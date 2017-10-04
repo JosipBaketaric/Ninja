@@ -53,7 +53,8 @@ namespace Ninja.WebApi.Authentication
 
 
             var result = uow.Ninjas.IsUserLogedIn(id);
-            if (!result)
+
+            if (result != 1)
                 return false;
 
 
@@ -62,8 +63,6 @@ namespace Ninja.WebApi.Authentication
 
             if (realToken != token)
                 return false;
-
-            var saved = uow.Ninjas.RefreshToken(id);
 
             return true;
         }

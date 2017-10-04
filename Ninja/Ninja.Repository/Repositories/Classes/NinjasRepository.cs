@@ -20,51 +20,40 @@ namespace Ninja.Repository.Repositories
 
         //CUSTOM QUERIES GOES BELLOW
 
-        public int LoginNinja(string Name, string password, string token)
+        public Ninja.Domain.Ninja LoginNinja(string Name, string password, string token)
         {
             var ninja = FindOne(x => x.Name == Name && x.Password == password);
 
             if (ninja == null)
             {
-                return -1;
+                return null;
             }
 
             ninja.Token = token;
-            ninja.TokenExpirationTime = DateTime.Now.AddMinutes(10);
-
             Update(ninja);
 
-            return ninja.Id;
+            return ninja;
         }
 
-        public bool RefreshToken(int id)
+
+        /// <summary>
+        /// 1 - OK
+        /// -1 - Ninja not found
+        /// -2 - Token not found
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int IsUserLogedIn(int id)
         {
             var ninja = Get(id);
 
             if (ninja == null)
-                return false;
-
-            ninja.TokenExpirationTime = DateTime.Now.AddMinutes(10);
-            return true;
-        }
-
-        public bool IsUserLogedIn(int id)
-        {
-            var ninja = Get(id);
-
-            if (ninja == null)
-                return false;
+                return -1;
 
             if (ninja.Token == null)
-                return false;
+                return -2;
 
-            if (ninja.TokenExpirationTime == null)
-                return false;
-
-            if (ninja.TokenExpirationTime < DateTime.Now)
-                return false;
-
-            return true;
+            return 1;
         }
 
 

@@ -3,3 +3,9 @@ C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.LoginToken\bi
 C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.LoginToken\obj\Debug\Ninja.LoginToken.csprojResolveAssemblyReference.cache
 C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.LoginToken\obj\Debug\Ninja.LoginToken.dll
 C:\Users\josipba\documents\visual studio 2012\Projects\Ninja\Ninja.LoginToken\obj\Debug\Ninja.LoginToken.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.LoginToken\bin\Debug\Ninja.LoginToken.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.LoginToken\bin\Debug\Ninja.LoginToken.pdb
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.LoginToken\obj\Debug\Ninja.LoginToken.csprojResolveAssemblyReference.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.LoginToken\obj\Debug\Ninja.LoginToken.csproj.CoreCompileInputs.cache
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.LoginToken\obj\Debug\Ninja.LoginToken.dll
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.LoginToken\obj\Debug\Ninja.LoginToken.pdb

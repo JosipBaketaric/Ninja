@@ -34,7 +34,12 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
     })
         //-------------------------------------------------
 
-
+    .state('logout',
+    {
+        url: '/logout',
+        templateUrl: 'Login/MainView.html',
+        controller: 'LogoutController'
+    })
 
 
 
@@ -68,4 +73,11 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
 
 
 
+appModule.run(function ($rootScope, $window) {
 
+    if ($window.localStorage['LogedIn'] == true)
+        $rootScope.LogedIn = true;
+    $rootScope.LogedIn = false;
+    
+
+});

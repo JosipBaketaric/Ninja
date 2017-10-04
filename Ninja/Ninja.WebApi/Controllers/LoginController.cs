@@ -21,6 +21,37 @@ namespace Ninja.WebApi.Controllers
         }
 
 
+        [HttpPost]
+        [ActionName("LogoutNinja")]
+        public HttpResponseMessage LogoutNinja(int id)
+        {
+            try
+            {
+                if (id < 0)
+                {
+                    throw new ArgumentNullException("Id not valid");
+                }
+
+                var ninja = unitOfWork.Ninjas.Get(id);
+
+                if(ninja == null)
+                {
+                    throw new ArgumentNullException("Id not valid");
+                }
+
+                ninja.Token = null;
+                int response = unitOfWork.Complete();
+                return Request.CreateResponse(HttpStatusCode.OK, response);
+
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e.Message);
+
+            }
+        }
+
+
 
 
 
@@ -39,9 +70,9 @@ namespace Ninja.WebApi.Controllers
                 TokenGenerator tokenGenerator = new TokenGenerator();
                 var token = tokenGenerator.GenerateToken();
 
-                int ninjaId = unitOfWork.Ninjas.LoginNinja(name, password, token);
+                var ninja = unitOfWork.Ninjas.LoginNinja(name, password, token);
 
-                if (ninjaId == -1)
+                if (ninja == null)
                 {
                     throw new ArgumentNullException("Credentials not valid");
                 }
@@ -55,8 +86,8 @@ namespace Ninja.WebApi.Controllers
 
 
                 TokenAndIdView response = new TokenAndIdView();
-                response.Token = token;
-                response.NinjaId = ninjaId;
+                response.Token = ninja.Token;
+                response.NinjaId = ninja.Id;
 
 
                 return Request.CreateResponse(HttpStatusCode.OK, response);

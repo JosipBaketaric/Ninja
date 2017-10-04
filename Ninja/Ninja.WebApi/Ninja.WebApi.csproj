@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -144,6 +146,7 @@
     <Content Include="App_AngularJS\01Example\MainView.html" />
     <Content Include="App_AngularJS\Login\LoginController.js" />
     <Content Include="App_AngularJS\Login\MainView.html" />
+    <Content Include="App_AngularJS\Logout\LogoutController.js" />
     <Content Include="App_AngularJS\Ninja\MainView.html" />
     <Content Include="App_AngularJS\Ninja\NinjaController.js" />
     <Content Include="App_AngularJS\scripts\angular-ui-router.min.js" />

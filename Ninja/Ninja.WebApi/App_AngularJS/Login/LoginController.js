@@ -4,19 +4,6 @@
 
 
 
-    LogoutNinja = function () {
-
-        $window.localStorage['Token'] = null;
-        $window.localStorage['NinjaId'] = null;
-        $window.localStorage['NinjaName'] = null;
-
-        $window.localStorage['LogedIn'] = false;
-        $rootScope.LogedIn = false;
-        $route.reload();
-    }
-
-
-
 
     $scope.LoginNinja = function ()
     {
@@ -28,11 +15,17 @@
             (
                 function (data)
                 {
+
+                    var expirationTime = new Date();
+                    expirationTime.setMinutes(expirationTime.getMinutes() + 10);
+                    expirationTime = expirationTime.getTime();
+
                     //Save to local storage
                     $window.localStorage['Token'] = data.data['Token'];
                     $window.localStorage['NinjaId'] = data.data['NinjaId'];
                     $window.localStorage['NinjaName'] = $scope.name;
                     $window.localStorage['LogedIn'] = true;
+                    $window.localStorage['TokenExpirationTime'] = expirationTime;
 
                     $rootScope.LogedIn = true;
                     //Redirect to ninja profile
@@ -51,13 +44,6 @@
 
 
 
-
-
-    if ($window.localStorage['LogedIn'] == true)
-    {
-        LogoutNinja();
-    }
-        
 
 
 
