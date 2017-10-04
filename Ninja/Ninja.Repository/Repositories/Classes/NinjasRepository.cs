@@ -20,13 +20,13 @@ namespace Ninja.Repository.Repositories
 
         //CUSTOM QUERIES GOES BELLOW
 
-        public bool LoginNinja(string Name, string password, string token)
+        public int LoginNinja(string Name, string password, string token)
         {
             var ninja = FindOne(x => x.Name == Name && x.Password == password);
 
             if (ninja == null)
             {
-                return false;
+                return -1;
             }
 
             ninja.Token = token;
@@ -34,7 +34,7 @@ namespace Ninja.Repository.Repositories
 
             Update(ninja);
 
-            return true;
+            return ninja.Id;
         }
 
         public bool RefreshToken(int id)

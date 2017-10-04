@@ -9,6 +9,13 @@
 	width: 48px;
 	height: 48px;
 }
+
+    .error-message-container {
+        color: red;
+        font-size: 20px;
+    }
+
+
 </style>
 
 
@@ -25,7 +32,7 @@
 				</div>
 			</md-toolbar>
 			<md-card-content>
-				<form name="login">
+				<form name="login" ng-submit="LoginNinja()">
 					<md-input-container class="md-block">
 						<label for="name">Name</label>
 						<input type="text" name="name" ng-model="name" required />
@@ -36,13 +43,16 @@
 					    </md-input-container>
 					    <md-input-container class="md-block">
 						    <div layout="row" layout-align="center center">
-							    <md-button class="md-raised md-primary" flex="50" ng-disabled="name == null || password == null" ng-click="LoginNinja()">Login</md-button>
+							    <md-button class="md-raised md-primary" flex="50" ng-disabled="name == null || password == null" type="submit">Login</md-button>
 						    </div>
 					    </md-input-container>
+                    <p ng-hide="!error" class="error-message-container">{{errorMessage}}</p>
 				    </form>
 			    </md-card-content>
 		    </md-card>
 	    </section>
+   
+
     </div>
 
 

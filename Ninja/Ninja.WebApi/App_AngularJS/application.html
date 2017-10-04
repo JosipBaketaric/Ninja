@@ -33,6 +33,8 @@
     <script src="Ninja/NinjaController.js"></script>
     <script src="Login/LoginController.js"></script>
 
+    <script src="Shared/BearerAuthInterceptor.js"></script>
+
 
     <!-- Directives -->
 
@@ -70,7 +72,7 @@ body {
             <span class="col lead">Ninja APP</span>
             <a href="#!/ninja" class="col">Ninja</a>
             <a href="#!/clan" class="col">Clan</a>
-            <a href="#!/login" class="col pull-right">Login</a>
+            <a href="#!/login" class="col pull-right" ng-hide="!LogedIn">Logout</a>
         </div>         
       </div>
     </nav>

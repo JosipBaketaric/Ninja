@@ -164,6 +164,7 @@
     <Content Include="App_AngularJS\scripts\bootstrap\js\tether.min.js" />
     <Content Include="App_AngularJS\scripts\jquery-3.2.1.js" />
     <Content Include="App_AngularJS\scripts\jquery-3.2.1.min.js" />
+    <Content Include="App_AngularJS\Shared\BearerAuthInterceptor.js" />
     <Content Include="App_Readme\readme.txt" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />

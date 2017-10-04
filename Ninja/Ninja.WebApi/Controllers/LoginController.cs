@@ -1,5 +1,6 @@
 ﻿using Ninja.LoginToken;
 using Ninja.Repository.UnitOfWork;
+using Ninja.View;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -38,7 +39,13 @@ namespace Ninja.WebApi.Controllers
                 TokenGenerator tokenGenerator = new TokenGenerator();
                 var token = tokenGenerator.GenerateToken();
 
-                unitOfWork.Ninjas.LoginNinja(name, password, token);
+                int ninjaId = unitOfWork.Ninjas.LoginNinja(name, password, token);
+
+                if (ninjaId == -1)
+                {
+                    throw new ArgumentNullException("Credentials not valid");
+                }
+
                 int fComplete = unitOfWork.Complete();
 
                 if (fComplete == 0)
@@ -46,7 +53,12 @@ namespace Ninja.WebApi.Controllers
                     return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Failed to save token.");
                 }
 
-                var response = token;
+
+                TokenAndIdView response = new TokenAndIdView();
+                response.Token = token;
+                response.NinjaId = ninjaId;
+
+
                 return Request.CreateResponse(HttpStatusCode.OK, response);
             }
             catch (ArgumentNullException eNull)

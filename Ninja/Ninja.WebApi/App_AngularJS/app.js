@@ -1,14 +1,23 @@
 ﻿
-var appModule = angular.module('appModule', ['ngMaterial' ,'ui.router']);
+var appModule = angular.module('appModule', ['ngMaterial', 'ui.router']);
 
 //Configure routes
-appModule.config(function($stateProvider, $urlRouterProvider, $locationProvider)
+appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider)
 {
 
+
+
+
+
+
+
+
+
+
+
+
     //DEFAULT
-    $urlRouterProvider.otherwise('/login');
-
-
+    $urlRouterProvider.otherwise('/ninja');
 
 
 
@@ -21,10 +30,9 @@ appModule.config(function($stateProvider, $urlRouterProvider, $locationProvider)
     .state('login', 
     {
     url: '/login',
-    templateUrl: 'Login/MainView.html'
+    templateUrl: 'Login/MainView.html',
     })
         //-------------------------------------------------
-
 
 
 
@@ -35,7 +43,7 @@ appModule.config(function($stateProvider, $urlRouterProvider, $locationProvider)
     .state('ninja',
     {
         url: '/ninja',
-        templateUrl: 'ninja/MainView.html'
+        templateUrl: 'ninja/MainView.html',
     })
         //-------------------------------------------------
 
@@ -48,14 +56,16 @@ appModule.config(function($stateProvider, $urlRouterProvider, $locationProvider)
     .state('clan',
     {
         url: '/clan',
-        templateUrl: 'Clan/MainView.html'
+        templateUrl: 'Clan/MainView.html',
     })
         //-------------------------------------------------
 
 
 
-
-
-
-
 });
+
+
+
+
+
+
