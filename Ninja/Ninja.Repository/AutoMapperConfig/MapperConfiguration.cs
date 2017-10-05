@@ -21,6 +21,10 @@ namespace Ninja.Repository.AutoMapperConfig
                 config.CreateMap<Clan, ClanWithNinjasView>()
                     .ForMember(dest => dest.Ninjas, opt => opt.MapFrom( src => src.Ninjas ) );
 
+                config.CreateMap<Ninja.Domain.Ninja, NinjaWithClan>()
+                .ForMember(dest => dest.ClanId, opt => opt.MapFrom(src => src.Clan.Id))
+                .ForMember(dest => dest.ClanName, opt => opt.MapFrom(src => src.Clan.Name));
+
             });
 
         }

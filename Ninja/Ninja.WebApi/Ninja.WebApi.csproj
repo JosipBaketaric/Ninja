@@ -140,10 +140,6 @@
     <Content Include="App_AngularJS\application.html" />
     <Content Include="App_AngularJS\Clan\ClanController.js" />
     <Content Include="App_AngularJS\Clan\MainView.html" />
-    <Content Include="App_AngularJS\01Example\countries-info-template.html" />
-    <Content Include="App_AngularJS\01Example\CountriesController.js" />
-    <Content Include="App_AngularJS\01Example\CountriesDirective.js" />
-    <Content Include="App_AngularJS\01Example\MainView.html" />
     <Content Include="App_AngularJS\Login\LoginController.js" />
     <Content Include="App_AngularJS\Login\MainView.html" />
     <Content Include="App_AngularJS\Logout\LogoutController.js" />

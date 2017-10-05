@@ -12,13 +12,9 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
 {
 
     //DEFAULT
-    $urlRouterProvider.otherwise('/ninja');
-
-
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
-
-
 
         //login
         //-------------------------------------------------
@@ -44,10 +40,9 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
     {
         url: '/ninja',
         templateUrl: 'ninja/MainView.html',
-        resolve: { authenticate: authenticate }
+        //resolve: { authenticate: authenticate }
     })
         //-------------------------------------------------
-
 
 
 
@@ -58,27 +53,31 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
     {
         url: '/clan',
         templateUrl: 'Clan/MainView.html',
-        resolve: { authenticate: authenticate }
+        //resolve: { authenticate: authenticate }
     })
         //-------------------------------------------------
 
 
+
+
+
     //Route authentication
 
-    function authenticate($q, $state, $timeout, $window, BASE_LOCATION) {
+    function authenticate($q, $state, $timeout, $window) {
 
+        var deferred = $q.defer();
         var loged = $window.localStorage['LogedIn'];
-
-        if (loged == "true") {          
-            return $q.when();
+        
+        if (loged == "true") {
+            deferred.resolve();
         }
         else {
-            $timeout(function () {
-                $window.location.href = BASE_LOCATION + 'login';
-            })
-            return $q.reject();
+            deferred.reject('redirectToLogin');
+
         }
 
+              
+        return deferred.promise;
     }
 
 
@@ -90,17 +89,46 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
 
 
 
-appModule.run(function ($rootScope, $window) {
+appModule.run(function ($rootScope, $window, $state, BASE_LOCATION) {
+    
+    /*
+    $rootScope.$on('$locationChangeSuccess', function (event, toState) {
+        if (toState != 'http://localhost:60887/App_angularJS/application.html#!/login') {
+            if ($window.localStorage['LogedIn'] == 'false') { // Check if user allowed to transition                  
+                event.preventDefault();   // Prevent migration to default state                  
+                $state.go('login');
+            }
+        }
+    });
+    */
 
+
+    $rootScope.$on('$locationChangeStart',
+        function (event, toState, toParams, fromState, fromParams) {
+
+
+            if (toState != 'http://localhost:60887/App_angularJS/application.html#!/login')
+            {
+                if ($rootScope.LogedIn == false) { // Check if user allowed to transition                  
+                    event.preventDefault();   // Prevent migration to default state     
+                    $window.location.href = BASE_LOCATION + 'login';
+                }
+            }
+
+        })
+
+
+    
     var loged = $window.localStorage['LogedIn'];
-
     if (loged == "true")
     {
         $rootScope.LogedIn = true
     }        
     else {
         $rootScope.LogedIn = false;
-    }   
+    }
+
+    
     
 
 });

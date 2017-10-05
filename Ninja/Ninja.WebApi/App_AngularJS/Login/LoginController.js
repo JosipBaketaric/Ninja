@@ -26,6 +26,10 @@
                     $window.localStorage['Token'] = data.data['Token'];
                     $window.localStorage['NinjaId'] = data.data['NinjaId'];
                     $window.localStorage['NinjaName'] = $scope.name;
+
+                    $window.localStorage['ClanId'] = data.data['ClanId'];
+                    $window.localStorage['ClanName'] = data.data['ClanName']
+
                     $window.localStorage['LogedIn'] = "true";
                     $window.localStorage['TokenExpirationTime'] = expirationTime;
 

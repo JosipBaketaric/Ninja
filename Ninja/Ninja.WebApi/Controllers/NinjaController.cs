@@ -49,6 +49,46 @@ namespace Ninja.WebApi.Controllers
 
         }
 
+
+
+
+
+        [HttpGet]
+        [ActionName("GetNinjaWithClan")]
+        public HttpResponseMessage GetNinjaWithClan(int id)
+        {
+            try
+            {
+                if (id < 0)
+                {
+                    throw new ArgumentNullException("Id not valid");
+                }
+
+                var response = unitOfWork.Ninjas.GetNinjaWithClan(id);
+
+                return Request.CreateResponse(HttpStatusCode.OK, response);
+            }
+            catch (ArgumentNullException eNull)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, eNull.Message);
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e.Message);
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
         [HttpGet]
         [ActionName("GetAllNinjas")]
         public HttpResponseMessage GetAllNinjas()
@@ -139,6 +179,12 @@ namespace Ninja.WebApi.Controllers
             }
 
         }
+
+
+
+
+
+
 
 
 

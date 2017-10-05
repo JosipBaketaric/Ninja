@@ -8,18 +8,6 @@
     $rootScope.LogedIn = false;
 
 
-    $http.post('/api/login/LogoutNinja?id=' + $window.localStorage['NinjaId'])
-        .then
-        (
-        function (data) {
-            //notify
-        },
-        function errorCallback(response) {
-
-        }
-        );
-
-
     $window.localStorage['Token'] = null;
     $window.localStorage['NinjaId'] = null;
     $window.localStorage['NinjaName'] = null;

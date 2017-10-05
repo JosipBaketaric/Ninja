@@ -1,5 +1,21 @@
 ﻿<div ng-controller="ClanController">
-    <p>Hi {{name}}!</p>
+
+    <h3>{{clan.name}}</h3>
+
+    <table class="table">
+        <tr>
+            <th>Ninjas in clan:</th>
+        </tr>
+
+        <tbody ng-repeat="ninja in ninjas">
+            <tr>
+                <td>-> {{ninja.Name}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
 </div>
 
 

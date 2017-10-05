@@ -17,7 +17,9 @@
                 }
 
                 var now = new Date().getTime();
-                
+
+                //If token have expired then remove data from local storage and logout user
+                //else refresh token and add required data to header of request
                 if (loged == "true" && TokenExpirationTime < now)
                 {
                     //Logout
