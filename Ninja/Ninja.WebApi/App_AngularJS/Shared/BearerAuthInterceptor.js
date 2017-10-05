@@ -1,4 +1,6 @@
-﻿angular.module('appModule').factory('httpRequestInterceptor', ['$window', '$q', function ($window, $q) {
+﻿angular.module('appModule').factory('httpRequestInterceptor',
+    ['$window', '$q', '$rootScope','TOKEN_DURATION',
+        function ($window, $q, $rootScope, TOKEN_DURATION) {
 
     var interceptor =
         {
@@ -7,6 +9,7 @@
                 var Token = $window.localStorage['Token'];
                 var NinjaId = $window.localStorage['NinjaId'];
                 var TokenExpirationTime = $window.localStorage['TokenExpirationTime'];
+                var loged = $window.localStorage['LogedIn'];
 
                 if (Token == null || NinjaId == null) {
                     Token = 'undefined';
@@ -14,19 +17,31 @@
                 }
 
                 var now = new Date().getTime();
-
-                if (TokenExpirationTime != null && TokenExpirationTime < now)
+                
+                if (loged == "true" && TokenExpirationTime < now)
                 {
+                    //Logout
+                    $window.localStorage['Token'] = null;
+                    $window.localStorage['NinjaId'] = null;
+                    $window.localStorage['NinjaName'] = null;
+                    $window.localStorage['LogedIn'] = "false";
+                    $window.localStorage['TokenExpirationTime'] = null;
+                    $rootScope.LogedIn = false;
 
-                    console.log("usao");
-                    console.log("token time: " + TokenExpirationTime);
-                    console.log("Now: " + now);
+                    q.reject("Login timeout");
+                }
+                else {
+                    var extendedTime = new Date();
+                    extendedTime.setMinutes(extendedTime.getMinutes() + TOKEN_DURATION);
+                    extendedTime = extendedTime.getTime();
+                    $window.localStorage['TokenExpirationTime'] = extendedTime;
 
+
+                    config.headers['Token'] = Token;
+                    config.headers['NinjaId'] = NinjaId;
                 }
 
 
-                config.headers['Token'] = Token;
-                config.headers['NinjaId'] = NinjaId;
 
 
 
