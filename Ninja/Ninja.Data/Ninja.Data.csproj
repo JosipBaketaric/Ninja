@@ -72,6 +72,14 @@
     <Compile Include="Migrations\201710041219385_RemoveTokenExpirationTime.Designer.cs">
       <DependentUpon>201710041219385_RemoveTokenExpirationTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710090804445_StoredProcedureRemoveNinjaFromClan.cs" />
+    <Compile Include="Migrations\201710090804445_StoredProcedureRemoveNinjaFromClan.Designer.cs">
+      <DependentUpon>201710090804445_StoredProcedureRemoveNinjaFromClan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710091217281_AddNinjaToClanSP.cs" />
+    <Compile Include="Migrations\201710091217281_AddNinjaToClanSP.Designer.cs">
+      <DependentUpon>201710091217281_AddNinjaToClanSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NinjaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710041219385_RemoveTokenExpirationTime.resx">
       <DependentUpon>201710041219385_RemoveTokenExpirationTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090804445_StoredProcedureRemoveNinjaFromClan.resx">
+      <DependentUpon>201710090804445_StoredProcedureRemoveNinjaFromClan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710091217281_AddNinjaToClanSP.resx">
+      <DependentUpon>201710091217281_AddNinjaToClanSP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

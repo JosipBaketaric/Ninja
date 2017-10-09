@@ -8,5 +8,7 @@ namespace Ninja.Repository.Repositories
         int IsUserLogedIn(int id);
         Ninja.Domain.Ninja LoginNinja(string Name, string password, string token);
         NinjaWithClan GetNinjaWithClan(int id);
+        void RemoveNinjaFromClan(int id);
+        void AddNinjaToClan(int ninjaId, int clanId);
     }
 }

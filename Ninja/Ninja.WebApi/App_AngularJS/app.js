@@ -58,11 +58,35 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
         //-------------------------------------------------
 
 
+        //List of all clans
+        //-------------------------------------------------
+        .state('clans',
+        {
+            url: '/clans',
+            templateUrl: 'Clans/MainView.html',
+            //resolve: { authenticate: authenticate }
+        })
+
+
+        //Child view
+        .state('clans.details',
+        {
+            url: '/clans.details',
+            views: {
+                "root": {
+                    templateUrl: 'Clans/DetailsView.html',
+                }
+            }
+            
+            //resolve: { authenticate: authenticate }
+        })
+        //-------------------------------------------------
+
 
 
 
     //Route authentication
-
+    /*
     function authenticate($q, $state, $timeout, $window) {
 
         var deferred = $q.defer();
@@ -80,7 +104,7 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
         return deferred.promise;
     }
 
-
+    */
 
 
 });
@@ -89,18 +113,10 @@ appModule.config(function ($stateProvider, $urlRouterProvider, $locationProvider
 
 
 
-appModule.run(function ($rootScope, $window, $state, BASE_LOCATION) {
-    
-    /*
-    $rootScope.$on('$locationChangeSuccess', function (event, toState) {
-        if (toState != 'http://localhost:60887/App_angularJS/application.html#!/login') {
-            if ($window.localStorage['LogedIn'] == 'false') { // Check if user allowed to transition                  
-                event.preventDefault();   // Prevent migration to default state                  
-                $state.go('login');
-            }
-        }
-    });
-    */
+appModule.run(function ($rootScope, $window, $state, BASE_LOCATION, $log) {
+
+
+
 
 
     $rootScope.$on('$locationChangeStart',

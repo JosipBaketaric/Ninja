@@ -35,3 +35,5 @@ C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.d
 C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.pdb
 C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.SeedForUser.resources
 C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.RemoveTokenExpirationTime.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.StoredProcedureRemoveNinjaFromClan.resources
+C:\Users\josipba\Documents\Skolica\Ninja\Ninja\Ninja.Data\obj\Debug\Ninja.Data.Migrations.AddNinjaToClanSP.resources

@@ -33,6 +33,7 @@
     <script src="Ninja/NinjaController.js"></script>
     <script src="Login/LoginController.js"></script>
     <script src="Logout/LogoutController.js"></script>
+    <script src="Clans/ClansController.js"></script>
 
     <script src="Shared/BearerAuthInterceptor.js"></script>
 
@@ -71,8 +72,9 @@ body {
       <div class="container-fluid row">
         <div class="navbar-header">
             <span class="col lead">Ninja APP</span>
-            <a href="#!/ninja" class="col" ng-hide="!LogedIn">Ninja</a>
-            <a href="#!/logout" class="col pull-right" ng-hide="!LogedIn">Logout</a>
+            <a ui-sref="ninja" class="col" ng-hide="!LogedIn">Ninja</a>
+            <a ui-sref="clans" class="col" ng-hide="!LogedIn">Clans</a>
+            <a ui-sref="logout" class="col pull-right" ng-hide="!LogedIn">Logout</a>
         </div>         
       </div>
     </nav>

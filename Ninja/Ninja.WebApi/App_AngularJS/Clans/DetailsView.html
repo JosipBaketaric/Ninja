@@ -1,0 +1,21 @@
+﻿<h3>{{details.clan.Name}}</h3> 
+<button class="md-primary md-raised" ng-click="showConfirmLJoinClan($event, details.clan.Id)" ng-show="!fHasClan">
+    Join</button>
+
+<table class="table" ng-show="details.clan.Ninjas[0]">
+
+    <tr>
+        <th>Ninjas in clan:</th>
+    </tr>
+
+    <tbody ng-repeat="ninja in details.clan.Ninjas">
+        <tr>
+            <td>-> {{ninja.Name}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<p ng-show="!details.clan.Ninjas[0]">No ninjas in clan.</p>
+
+

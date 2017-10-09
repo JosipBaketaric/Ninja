@@ -3,6 +3,8 @@ using AutoMapper;
 using Ninja.Data;
 using Ninja.View;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace Ninja.Repository.Repositories
@@ -39,7 +41,24 @@ namespace Ninja.Repository.Repositories
 
 
 
+        public void RemoveNinjaFromClan(int id)
+        {
+            SqlParameter param1 = new SqlParameter("@Id", id);
+            NinjaContext
+                .Database
+                .SqlQuery<object>("RemoveNinjaFromClanSP @Id", param1)
+                .SingleOrDefault();
+        }
 
+        public void AddNinjaToClan(int ninjaId, int clanId)
+        {
+            SqlParameter param1 = new SqlParameter("@ninjaId", ninjaId);
+            SqlParameter param2 = new SqlParameter("@clanId", clanId);
+            NinjaContext
+                .Database
+                .SqlQuery<object>("AddNinjaToClanSP @ninjaId, @clanId", param1, param2)
+                .SingleOrDefault();
+        }
 
 
 

@@ -138,6 +138,9 @@
   <ItemGroup>
     <Content Include="App_AngularJS\app.js" />
     <Content Include="App_AngularJS\application.html" />
+    <Content Include="App_AngularJS\Clans\ClansController.js" />
+    <Content Include="App_AngularJS\Clans\DetailsView.html" />
+    <Content Include="App_AngularJS\Clans\MainView.html" />
     <Content Include="App_AngularJS\Clan\ClanController.js" />
     <Content Include="App_AngularJS\Clan\MainView.html" />
     <Content Include="App_AngularJS\Login\LoginController.js" />

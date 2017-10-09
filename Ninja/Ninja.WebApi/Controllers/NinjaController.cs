@@ -151,23 +151,15 @@ namespace Ninja.WebApi.Controllers
                     throw new ArgumentNullException("Arguments not valid");
                 }
 
-                var ninja = unitOfWork.Ninjas.Get(ninjaId);
+                if(unitOfWork.Ninjas.Get(ninjaId).Clan != null)
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, 
+                        "You are already in clan! To join clan first leave current clan.");
+                }
 
-                if(ninja == null)
-                    throw new ArgumentNullException("NinjaId not valid");
+                unitOfWork.Ninjas.AddNinjaToClan(ninjaId, clanId);
 
-                var clan = unitOfWork.Clans.Get(clanId);
-
-                if(clan == null)
-                    throw new ArgumentNullException("ClanId not valid");
-
-                ninja.Clan = clan;
-
-                unitOfWork.Ninjas.Update(ninja);
-
-                var response = unitOfWork.Complete();
-
-                return Request.CreateResponse(HttpStatusCode.OK, response);
+                return Request.CreateResponse(HttpStatusCode.OK, 1);
             }
             catch (ArgumentNullException eNull)
             {
@@ -183,7 +175,25 @@ namespace Ninja.WebApi.Controllers
 
 
 
+        [HttpPut]
+        [ActionName("RemoveNinjaFromClan")]
+        public HttpResponseMessage RemoveNinjaFromClan(int id)
+        {
+            try
+            {
+                unitOfWork.Ninjas.RemoveNinjaFromClan(id);
+                return Request.CreateResponse(HttpStatusCode.OK, 1);
+            }
+            catch (ArgumentNullException eNull)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, eNull.Message);
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e.Message);
+            }
 
+        }
 
 
 

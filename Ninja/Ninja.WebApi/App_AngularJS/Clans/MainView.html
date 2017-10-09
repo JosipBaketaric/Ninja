@@ -1,0 +1,26 @@
+﻿<div ng-controller="ClansController">
+
+    <h3>All Clans</h3>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+        </tr>
+
+        <tbody ng-repeat="clan in clans">
+            <tr>
+                <td>-> <button class="btn" ng-click="ClanDetails(clan.Id)">{{clan.Name}}</button> </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+    <!--Child views container-->
+    <div ui-view="root"></div>
+
+
+
+</div>
+
+
